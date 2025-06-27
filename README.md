@@ -11,20 +11,18 @@ The `Traffic Split` project implements a mechanism for routing transactions betw
 
 ## Installation
 
-git clone https://github.com/programejt/TrafficSplit.git
+`git clone https://github.com/programejt/TrafficSplit.git`
 
-cd TrafficSplit
+`cd TrafficSplit`
 
-composer install
+`composer install`
 
 ## Usage
 
 To run script, type in terminal:
-
 `php ./index.php`
 
 
 
 To run unit tests, type in terminal:
-
 `./vendor/bin/phpunit tests`
