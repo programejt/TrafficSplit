@@ -1,9 +1,9 @@
 <?php
 
-class Gateway
-{
-  public const int MAX_WEIGHT = 100;
+namespace App;
 
+class Gateway implements GatewayInterface, LoadInterface
+{
   public readonly float $weight;
   private array $payments = [];
   private int $load = 0;
@@ -17,6 +17,11 @@ class Gateway
       $weight > self::MAX_WEIGHT => self::MAX_WEIGHT,
       default                    => $weight,
     };
+  }
+
+  public function getWeight(): float
+  {
+    return $this->weight;
   }
 
   public function addPayment(Payment $payment): void

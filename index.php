@@ -3,6 +3,11 @@
 require 'vendor/autoload.php';
 require 'src/functions.php';
 
+use App\GatewaysCollection;
+use App\Gateway;
+use App\TrafficSplit;
+use App\Payment;
+
 const ITERATIONS = 10000;
 
 $equalLoadGateways = new GatewaysCollection(

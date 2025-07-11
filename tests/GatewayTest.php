@@ -1,8 +1,12 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+namespace Test;
 
-final class GatewaysTest extends TestCase
+use PHPUnit\Framework\TestCase;
+use App\Gateway;
+use App\Payment;
+
+final class GatewayTest extends TestCase
 {
   public function testValid(): void
   {

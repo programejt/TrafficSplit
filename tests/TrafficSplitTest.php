@@ -1,6 +1,12 @@
 <?php
 
+namespace Test;
+
 use PHPUnit\Framework\TestCase;
+use App\GatewaysCollection;
+use App\Gateway;
+use App\TrafficSplit;
+use App\Payment;
 
 final class TrafficSplitTest extends TestCase
 {
@@ -57,9 +63,7 @@ final class TrafficSplitTest extends TestCase
 
   public function testEmptyGateways(): void
   {
-    $gateways = new GatewaysCollection();
-
-    $trafficSplit = new TrafficSplit($gateways);
+    $trafficSplit = new TrafficSplit(new GatewaysCollection);
 
     $this->assertNull($trafficSplit->handlePayment(new Payment(1)));
   }

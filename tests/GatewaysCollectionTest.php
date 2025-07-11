@@ -1,6 +1,10 @@
 <?php
 
+namespace Test;
+
 use PHPUnit\Framework\TestCase;
+use App\GatewaysCollection;
+use App\Gateway;
 
 final class GatewaysCollectionTest extends TestCase
 {
@@ -13,7 +17,7 @@ final class GatewaysCollectionTest extends TestCase
   {
     $gateways = new GatewaysCollection;
 
-    $gateways->append(new stdClass);
+    $gateways->append(new \stdClass);
     $gateways->append(6);
 
     $this->assertCount(0, $gateways);

@@ -2,11 +2,11 @@
 
 function printSummary(
   string $title,
-  GatewaysCollection $gateways,
+  App\GatewaysCollection $gateways,
 ): void {
   echo $title.":\n";
 
   foreach ($gateways as $gateway) {
-    echo $gateway . " (weight: " . $gateway->weight . ") - load: ".$gateway->getTrafficLoad() . "\n";
+    echo $gateway . " (weight: " . $gateway->getWeight() . ") - load: ".$gateway->getTrafficLoad() . "\n";
   }
 }
