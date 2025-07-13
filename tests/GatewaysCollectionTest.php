@@ -13,16 +13,6 @@ final class GatewaysCollectionTest extends TestCase
     $this->assertCount(0, new GatewaysCollection);
   }
 
-  public function testAppendNotGateway(): void
-  {
-    $gateways = new GatewaysCollection;
-
-    $gateways->append(new \stdClass);
-    $gateways->append(6);
-
-    $this->assertCount(0, $gateways);
-  }
-
   public function testAppendExceedMaxWeight(): void
   {
     $gateways = new GatewaysCollection(

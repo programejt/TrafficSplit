@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Gateway implements GatewayInterface, LoadInterface
+class Gateway implements GatewayInterface
 {
   public readonly float $weight;
   private array $payments = [];

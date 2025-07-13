@@ -2,6 +2,6 @@
 
 namespace App;
 
-interface GatewayInterface extends WeightInterface, PaymentHandlerInterface
+interface GatewayInterface extends WeightInterface, PaymentHandlerInterface, LoadInterface
 {
 }

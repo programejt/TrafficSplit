@@ -5,7 +5,7 @@ namespace App;
 class TrafficSplit
 {
   public function __construct(
-    private GatewaysCollection $gateways,
+    private GatewaysCollectionInterface $gateways,
   ) {}
 
   public function handlePayment(Payment $payment): ?GatewayInterface
